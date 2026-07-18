@@ -14,3 +14,10 @@ fruits[0] = "Mango"
 fruits.append("Apple")
 
 print(fruits)
+
+# nested list
+nested_list = ["A", "B", ["C", "D"]]
+
+# print letter D
+letter_d = nested_list[2][1]
+print(letter_d)
