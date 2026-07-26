@@ -8,6 +8,8 @@ class CarBluePrint:
         self.brand = brand
         self.model = model
         self.year = year
+        # setting a default value for an attribute
+        self.odometer_reading = 0
 
     # create methods for the class
     def print_message(self):
@@ -15,6 +17,16 @@ class CarBluePrint:
 
     def print_car(self):
         return f"{self.year} {self.model.title()} car"
+
+    def read_odometer(self):
+        return f"This car has {self.odometer_reading} miles on it."
+
+    # modifying an attribute's value through a method
+    def update_odometer(self, mileage):
+        if mileage >= self.odometer_reading:
+            self.odometer_reading = mileage
+        else:
+            print("You can't roll back an odometer")
 
 
 # making an instance from a class
@@ -31,3 +43,14 @@ print(greetings)
 
 car_year_name = my_car.print_car()
 print(car_year_name)
+
+# modifying attribute value directly
+my_car.odometer_reading = 900
+print(my_car.read_odometer())
+
+# modifying attribute value through method
+my_car.update_odometer(1000)
+print(my_car.read_odometer())
+
+my_car.update_odometer(23)
+print(my_car.read_odometer())
