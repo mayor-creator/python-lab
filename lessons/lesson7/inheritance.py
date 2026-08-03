@@ -40,7 +40,7 @@ class ElectricCarBluePrint(CarBluePrint):
         return f"This car has a {self.battery_size}-kWh battery."
 
 
-my_macan = ElectricCarBluePrint("porsche", "macan turbo electric", 2026)
-print(my_macan.print_message())
-print(my_macan.print_car())
-print(my_macan.describe_battery())
+# my_macan = ElectricCarBluePrint("porsche", "macan turbo electric", 2026)
+# print(my_macan.print_message())
+# print(my_macan.print_car())
+# print(my_macan.describe_battery())
