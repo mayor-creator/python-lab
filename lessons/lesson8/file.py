@@ -2,6 +2,7 @@
 # execute a code block under the control of a context manager
 
 # reading a file
+# open() function returns an object representing the file
 with open("python-lab/lessons/lesson8/my_file.txt", mode="r") as file:
     content = file.read()
 
