@@ -1,3 +1,5 @@
+import html
+
 import requests
 
 
@@ -28,7 +30,7 @@ quiz_questions_data = quiz_data()
 def get_quiz_questions():
     questions = []
     for question in quiz_questions_data:
-        questions.append(question["question"])
+        questions.append(html.unescape(question["question"]))
     return questions
 
 
@@ -36,7 +38,7 @@ def get_quiz_questions():
 def get_quiz_answers():
     answers = []
     for answer in quiz_questions_data:
-        answers.append(answer["correct_answer"])
+        answers.append(html.unescape(answer["correct_answer"]))
     return answers
 
 
@@ -44,13 +46,13 @@ def get_quiz_answers():
 # return the number answered correctly
 def start_quiz():
     quizzes = get_quiz_questions()
-    for position, quiz in enumerate(quizzes, start=1):
-        ask = input(f"{position}. {quiz}? (True / False)\n").capitalize()
-
     answers = get_quiz_answers()
     count = 0
-    for ans in answers:
-        if ask == ans:
+
+    for position, quiz in enumerate(quizzes, start=1):
+        ask = input(f"{position}. {quiz}? (True / False)\n").capitalize()
+        correct_answer = answers[position - 1]
+        if ask == correct_answer:
             count += 1
 
     print(f"You got {count} correct on the quiz")
