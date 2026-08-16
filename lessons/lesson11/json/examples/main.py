@@ -23,3 +23,8 @@ with open(file=filename, mode="w", encoding="utf-8") as write_file:
     print("Data is written to json file.")
 
 # read json file with load()
+with open(file=filename, mode="r", encoding="utf-8") as read_file:
+    data = json.load(read_file)
+
+
+print(data["friends"])
