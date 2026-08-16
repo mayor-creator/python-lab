@@ -1,32 +1,32 @@
 {
-  "name": "juliette",
-  "hobbies": [
-    "photography",
-    "reading",
-    "gaming"
-  ],
-  "address": {
-    "work": "engineer",
-    "home": [
-      "Lyon",
-      "France"
-    ]
-  },
-  "friends": [
-    {
-      "name": "mayor",
-      "hobbies": [
-        "coding",
+    "name": "juliette",
+    "hobbies": [
+        "photography",
         "reading",
-        "running"
-      ]
+        "gaming"
+    ],
+    "address": {
+        "work": "engineer",
+        "home": [
+            "Lyon",
+            "France"
+        ]
     },
-    {
-      "name": "gloria",
-      "hobbies": [
-        "cooking",
-        "painting"
-      ]
-    }
-  ]
+    "friends": [
+        {
+            "name": "mayor",
+            "hobbies": [
+                "coding",
+                "reading",
+                "running"
+            ]
+        },
+        {
+            "name": "gloria",
+            "hobbies": [
+                "cooking",
+                "painting"
+            ]
+        }
+    ]
 }
