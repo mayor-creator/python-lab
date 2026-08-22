@@ -43,3 +43,17 @@ print(f"The first fruit of the day is {first_fruit} fruit.")
 bad_fruit = "Strawberry"
 fruits.remove(bad_fruit)
 print(fruits)
+
+# using extend method to add items to a list
+courses = ["History", "Math", "Physics", "CompSci"]
+courses_2 = ["Art", "Photography"]
+courses.extend(courses_2)
+
+print(courses)
+
+# finding the index of an item
+print(courses.index("Math"))
+
+# using the enumerate() to find the index of items
+for index, course in enumerate(courses):
+    print(f"{index} - {course}")
