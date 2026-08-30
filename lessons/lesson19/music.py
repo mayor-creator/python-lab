@@ -1,20 +1,11 @@
 from selenium import webdriver
-<<<<<<< HEAD
-=======
 from selenium.webdriver.common.by import By
 from selenium.webdriver.common.keys import Keys
->>>>>>> lesson_features
 from selenium.webdriver.firefox.options import Options
 
 options = Options()
 options.add_argument("--headless")
 driver = webdriver.Firefox(options=options)
-<<<<<<< HEAD
-driver.get("https://www.python.org")
-
-print(driver.title)
-
-=======
 driver.implicitly_wait(5)
 
 # navigate to the website url
@@ -40,5 +31,4 @@ search_box.send_keys("Search for this")
 # search_box.submit()
 search_box.send_keys(Keys.ENTER)
 
->>>>>>> lesson_features
 driver.quit()
