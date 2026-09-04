@@ -14,3 +14,7 @@ print(f"Grand Prix: {session.event['EventName']}")
 
 print("***** Results of the top Ten Qualifiers *****")
 print(session.results.iloc[0:10].loc[:, ["Abbreviation", "Q3"]])
+
+fastest_lap = session.laps.pick_fastest()
+print(fastest_lap["LapTime"])
+print(fastest_lap["Driver"])
