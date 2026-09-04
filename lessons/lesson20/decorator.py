@@ -30,9 +30,9 @@ def not_during_the_night(func):
     return wrapper
 
 
+@not_during_the_night
 def say_hi():
     print("Hi!!!")
 
 
-say_hi = not_during_the_night(say_hi)
 say_hi()
