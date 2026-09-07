@@ -5,7 +5,12 @@ app = Flask(__name__)
 
 @app.route("/")
 def hello_world():
-    return "<p>Bonjour, World!</p>"
+    return (
+        "<main>"
+        '<h1 style="text-align:center">Bonjour, World!</h1>'
+        "<p>This is a paragraph.</p>"
+        "</main>"
+    )
 
 
 @app.route("/bye")
