@@ -47,4 +47,30 @@ spread_col = (
     - clean_df["Mid-Career 10th Percentile Salary"]
 )
 clean_df.insert(1, "Spread", spread_col)
-print(clean_df.head())
+
+# sorting values
+low_risk = clean_df.sort_values("Spread")
+low_risk[["Undergraduate Major", "Spread"]].head()
+
+highest_potential = clean_df.sort_values(
+    "Mid-Career 90th Percentile Salary", ascending=False
+)
+salary_potential = highest_potential[
+    ["Undergraduate Major", "Mid-Career 90th Percentile Salary"]
+].head()
+
+
+highest_spread = clean_df.sort_values("Spread", ascending=False)
+salary_spread = highest_spread[["Undergraduate Major", "Spread"]].head()
+
+highest_mid_career = clean_df.sort_values("Mid-Career Median Salary", ascending=False)
+highest_mid_salary = highest_mid_career[
+    ["Undergraduate Major", "Mid-Career Median Salary"]
+].head()
+
+# grouping and pivoting data
+count_majors = clean_df.groupby("Group").count()
+
+# number format
+pd.options.display.float_format = "{:,.2f}".format
+mean_major = clean_df.groupby("Group").mean(numeric_only=True)
