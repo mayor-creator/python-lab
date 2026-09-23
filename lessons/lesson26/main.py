@@ -68,4 +68,9 @@ highest_mid_salary = highest_mid_career[
     ["Undergraduate Major", "Mid-Career Median Salary"]
 ].head()
 
+# grouping and pivoting data
+count_majors = clean_df.groupby("Group").count()
 
+# number format
+pd.options.display.float_format = "{:,.2f}".format
+mean_major = clean_df.groupby("Group").mean(numeric_only=True)
