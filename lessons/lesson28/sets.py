@@ -28,8 +28,22 @@ y = sets_by_year.set_num[:-2]
 h = theme_by_year.index[:-2]
 k = theme_by_year.nr_themes[:-2]
 
-fig, ax = plt.subplots()
-ax.set_xlabel("Year")
-ax.set_ylabel("Number of Sets", color="green")
-ax.plot(x, y, h, k)
+fig, ax1 = plt.subplots()
+
+# two separate axes plot
+ax2 = ax1.twinx()
+
+ax1.set_xlabel("Year")
+ax1.set_ylabel("Number of Sets", color="green")
+ax2.set_ylabel("Number of Themes", color="blue")
+
+line1 = ax1.plot(x, y, color="g", label="Number of Sets")[0]
+line2 = ax2.plot(h, k, color="b", label="Number of Themes")[0]
+
+# combine legends from both axes
+lines = [line1, line2]
+labels = [l.get_label() for l in lines]
+ax1.legend(lines, labels, loc="upper left")
+
+plt.title("LEGO Sets and Themes Released by Year")
 plt.show()
