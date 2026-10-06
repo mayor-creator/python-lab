@@ -62,7 +62,7 @@ with sns.axes_style("darkgrid"):
 
     ax.set(
         ylim=(0, 3000000000),
-        lim=(0, 450000000),
+        xlim=(0, 450000000),
         ylabel="Revenue in $ billions",
         xlabel="Budget in $100 millions",
     )
